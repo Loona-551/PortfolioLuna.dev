@@ -1,0 +1,33 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+  {
+  date: 'January 2022 – April 2024',
+  title: 'Safety Coordinator | Villahermosa International Airport',
+  description: [
+    'Developed and maintained the airport\'s Operational Safety Promotion website to enhance safety awareness among personnel and stakeholders.',
+    'Implemented a digital voluntary reporting system via QR code and online forms, enabling staff to report operational hazards conveniently. The system automatically forwarded reports via WhatsApp and stored data in a centralized database for risk analysis.',
+    'Managed and maintained comprehensive hazard databases, including accident and incident records, movement area risks, and risk management documentation.',
+    'Conducted detailed data analysis and reporting on operational safety performance, creating clear and insightful presentations for airport management and regulatory compliance (in line with NOM-064-SCT3-2012).',
+    'Collaborated with airport executives to improve safety operations through data-driven insights and proactive risk identification.'
+  ]
+}
+
+];
+
+
+
+---
+
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">  
+    {
+        EXPERIENCE.map((Experience) => (
+            <li class="mb-50 ms-6">
+                <ExperienceItem {...Experience} />
+            </li>
+        ))}
+    </ol>
+
+

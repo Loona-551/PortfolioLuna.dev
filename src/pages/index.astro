@@ -1,0 +1,80 @@
+---
+import Badge from '../components/Badge.astro';
+import Layout from '../layouts/Layout.astro';
+import "../styles/global.css";
+import LinkedInIcon from '../components/icons/linkedin.astro';
+import GitHubIcon from '../components/icons/github.astro';
+import SocialPill from '../components/SocialPill.astro';
+import GmailIcon from '../components/icons/gmail.astro';  
+import Experience from '../components/Experience.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import Work from '../components/icons/Work.astro';
+import CodeIcon from '../components/icons/Code.astro';
+import Projects from '../components/Projects.astro';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout title="Luna Amaterasu's Portfolio - Data and Artificial Intelligence Engineer" 
+        description="Welcome to my portfolio! I am a Data and Artificial Intelligence Engineer, specializing in creating intelligent tools that blend technical depth with creative expression.">
+    <main>
+        <SectionContainer class="py-30 pb-60">
+          <div class="flex items-center gap-x-9 pb-3">
+             <h1 class="text-white text-3xl font-bold m-0 p-0">Hey, I am Luna </h1>
+             
+             <a href="https://www.linkedin.com/in/luna-amaterasu" 
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center">
+
+                <Badge>Available for hire</Badge>
+             </a>
+          </div>
+        
+
+        <h2 class="text-white text-justify leading-relaxed text-[1.3rem] mb-5 max-w-[600px]">
+         <span class="text-blue-400 inline-block pb-3">Data and Artificial Intelligence Engineer.</span><br>
+        I specialize in creating intelligent 
+        tools that blend technical depth with creative expression.
+        
+        </h2>
+
+        <nav class="flex gap-x-2 text-[0.8rem]">
+          
+            <SocialPill href="https://www.linkedin.com/in/luna-amaterasu">
+                <LinkedInIcon class="size-6" />
+                LinkedIn
+            </SocialPill>
+          
+            <SocialPill href="https://github.com/Loona-551">
+                <GitHubIcon class="size-6" />
+                GitHub
+            </SocialPill>
+
+            <SocialPill href="https://mail.google.com/mail/u/0/?fs=1&to=luna.amaterasu@gmail.com&su=Subject&body=Body&bcc=cc@example.com">
+                <GmailIcon class="size-6" />
+                Mail
+            </SocialPill>
+        </nav>
+
+      </SectionContainer>
+
+      <SectionContainer id="experience" class="mb-1 pl-1">
+        <h2 class="text-white text-2xl font-semibold mb-6 flex gap-x-3  items-center">
+          <Work class="size-6 " />
+          Experience</h2>
+        <Experience />
+      </SectionContainer>
+
+      <SectionContainer id="projects" class="mb-10 pl-1">
+        <h2 class="text-white text-2xl font-semibold mb-6 flex gap-x-3  items-center">
+          <CodeIcon class="size-6 " />
+          Projects</h2>
+        <Projects />
+      </SectionContainer>
+
+
+
+    </main>
+  </Layout>

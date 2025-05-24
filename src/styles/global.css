@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+.hanging-indent {
+  padding-left: 1.25rem; /* espacio para la viñeta */
+  text-indent: -1.25rem; /* mueve la primera línea a la izquierda */
+  margin-bottom: 0.5rem; /* espacio entre párrafos */
+  
+}
+
+/* ✨ Neon button efecto rosa fuerte */
+.neon-button {
+  color: white;
+  transition: all 0.3s ease-in-out;
+  border-radius: 9999px; /* rounded-full */
+  padding: 0.5rem 1rem; /* py-2 px-4 */
+}
+
+.neon-button:hover {
+  transform: scale(0.95);
+  box-shadow:
+    0 0 0 5px #ff3366,
+    0 0 15px #ff3366,
+    0 0 28px #ff3366,
+    0 0 40px #ff3366;
+  cursor: pointer;
+}

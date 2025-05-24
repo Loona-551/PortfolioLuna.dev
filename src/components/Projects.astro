@@ -1,0 +1,71 @@
+---
+import AIicon from "../components/icons/AI.astro";
+import MLicon from "../components/icons/ML.astro";
+import PythonIcon from "../components/icons/Python.astro";
+
+const TAGS = {
+    AI: {
+        name: "AI",
+        color: "bg-blue-500",
+        icon: AIicon,
+    },
+    ML: {
+        name: "ML",
+        color: "bg-green-500",
+        icon: MLicon,
+    },
+    Python: {
+        name: "Python",
+        color: "bg-yellow-500",
+        icon: PythonIcon,
+    },
+};
+
+import { Image } from "astro:assets";
+
+const PROJECTS = [
+    {
+        title: "Artificial Neural Networks Simulation",
+        description:
+            "Implemented multi-layer perceptrons (MLPs) from scratch in Python using NumPy. Trained and tested with different datasets, visualizing the behavior of the network by modifying hyperparameters such as learning rate, activation functions, and number of layers.",
+        link: "https://github.com/Loona-551/Pass1",
+        github: "https://github.com/Loona-551/Pass1",
+        image: "https://raw.githubusercontent.com/Loona-551/Pass1/refs/heads/main/1.webp",
+        tags: [TAGS.AI, TAGS.ML, TAGS.Python],
+        date: "2024-04",
+    },
+];
+---
+
+{
+  PROJECTS.map(({ title, description, image, tags }) => (
+    <article class="max-w-prose pl-9.5">
+      <h3 class="text-blue-400 text-xl font-semibold mb-2">
+        {title}
+      </h3>
+      <p class="text-gray-400 text-lg mb-4 text-justify">
+        {description}
+      </p>
+
+      <ul class="flex flex-wrap gap-2 mb-6">
+        {tags.map((tag) => (
+          <li>
+            <span
+              class={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium text-white ${tag.color}`}
+            >
+              <tag.icon class="w-4 h-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+
+      <img
+        class="rounded-4xl shadow-2xl shadow-blue-500/20 max-w-full h-auto"
+        src={image}
+        alt={`Screenshot ${image}`}
+      />
+    </article>
+  ))
+}
+
